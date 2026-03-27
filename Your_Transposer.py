@@ -4,8 +4,6 @@ A CLI tool to recommend family chords and transpose them to any key.
 
 """
 
-
-
 CHROMATIC = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 
 ENHARMONIC = {"DB": "C#", "EB": "D#", "FB": "E", "GB": "F#","AB": "G#", "BB": "A#", "CB": "B","E#": "F", "B#": "C",}
@@ -121,8 +119,12 @@ def get_chord_choice(family_chords: list[tuple[str, str, str]]) -> list[str]:
     while True:
         choice = input("  Your choice (1 or 2): ").strip()
         if choice == "1":
-            return [note + ("" if ctype == "maj" else ctype)
-                    for _, note, ctype in family_chords]
+            again = input("  Transpose again? (y/n): ").strip().lower()
+            if again in ("y", "yes"):
+                main()
+            else:
+                print("\n  Thanks for using Your_Transposer! \n")
+                print("\n Happy Music bye bye....swagieee!!!")
         if choice == "2":
             raw = input("\n  Enter your chords separated by commas (e.g. C, Am, F, G): ")
             chords = [c.strip() for c in raw.split(",") if c.strip()]
@@ -130,7 +132,7 @@ def get_chord_choice(family_chords: list[tuple[str, str, str]]) -> list[str]:
                 return chords
             print("  ✗  No chords detected. Try again.\n")
         else:
-            print("  ✗  Please enter 1 or 2.\n")
+             print("  ✗  Please enter 1 or 2.\n")
 
 
 def get_semitones() -> int:
@@ -197,6 +199,8 @@ def main():
     else:
         print("\n  Thanks for using Your_Transposer! \n")
         print("\n  Happy Music swagieee!!!!!!!!!")
+
+
 
 
 if __name__ == "__main__":
