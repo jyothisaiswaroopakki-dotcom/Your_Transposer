@@ -198,7 +198,7 @@ def main():
         main()
     else:
         print("\n  Thanks for using Your_Transposer! \n")
-        print("\n  Happy Music swagieee!!!!!!!!!")
+        print("\n  Happy Music swagieee!!!")
 
 
 
