@@ -2,8 +2,6 @@
 Your_Transposer
 A CLI tool to recommend family chords and transpose them to any key.
 
-
-
 """
 
 
