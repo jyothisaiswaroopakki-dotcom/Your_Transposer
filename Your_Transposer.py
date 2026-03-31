@@ -4,8 +4,6 @@ A CLI tool to recommend family chords and transpose them to any key.
 
 """
 
-
-
 CHROMATIC = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 
 ENHARMONIC = {"DB": "C#", "EB": "D#", "FB": "E", "GB": "F#","AB": "G#", "BB": "A#", "CB": "B","E#": "F", "B#": "C",}
